@@ -4,6 +4,9 @@ import os
 filePath = sys.argv[0]
 
 def fileSize(filePath):
-  print os.path.getsize(filePath)
+  return os.path.getsize(filePath)
 
-fileSize(filePath)
+print fileSize(filePath)
+
+### revisit why - but the solution accepts only single line
+print os.path.getsize(sys.argv[1])
