@@ -3,12 +3,29 @@
 
 def valid_email
   File.open("file").each_line do |email|
-    if /^[\d\w_\.-]+@[\da-z\.-]+\.([a-z\.]{2,6})$/.match(email.downcase.chomp)
-      p true
-    else
-      p false
-    end
+    puts email.downcase.chomp.match(/^[" a-z0-9!#$&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/) ? true: false
+    # /^[\w\d\\ "!#$&@'*+\/+=?^_`{|}()~-]+@[\w\d]+(?:\.[\w\d]+)*$/
   end
 end
 
 valid_email
+
+# "valid"
+# me@example.com
+# a.nonymous@example.com
+# name+tag@example.com
+# name\@tag@example.com
+# spaces\ are\ allowed@example.com
+# "spaces may be quoted"@example.com
+# !#$%&'+-/=.?^`{|}~@[1.0.0.127]
+# !#$%&'+-/=.?^`{|}~@[IPv6:0123:4567:89AB:CDEF:0123:4567:89AB:CDEF]
+# me(this is a comment)@example.com
+
+# "invalid"
+# me@
+# @example.com
+# me.@example.com
+# .me@example.com
+# me@example..com
+# me.example@com
+# me\@example.com

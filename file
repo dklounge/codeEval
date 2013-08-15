@@ -1,9 +1,22 @@
-foo@bar.com
-this is not an email id
-admin#codeeval.com
-good123@bad.com.d.d.d
-kimdkim@yahoo.333.uk
+'valid'
+me@example.com
+a.nonymous@example.com
+name+tag@example.com
+name\@tag@example.com
+spaces\ are\ allowed@example.com
+"spaces may be quoted"@example.com
+!#$%&'+-/=.?^`{|}~@[1.0.0.127]
+!#$%&'+-/=.?^`{|}~@[IPv6:0123:4567:89AB:CDEF:0123:4567:89AB:CDEF]
+me(this is a comment)@example.com
 
+'invalid'
+me@
+@example.com
+me.@example.com
+.me@example.com
+me@example..com
+me.example@com
+me\@example.com
 
 1,2,3,4;4,5,6
 20,21,22;45,46,47
