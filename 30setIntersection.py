@@ -7,12 +7,15 @@
 
 data = open("file")
 for line in data:
-  allset = set(line.split(';'))
-  # newset = allset.split(',')
-  a = set(allset.pop().strip().replace(',',''))
-  b = set(allset.pop().strip().replace(',',''))
-  intersection = sorted(a & b)
-  # print intersection
-  print ','.join(intersection)
+  # strip out empty spaces and split into array
+  allset = line.strip().replace(' ','').split(';')
+
+  # use pop to create two arrays (don't need to make them into sets yet)
+  a = allset.pop().strip().split(',')
+  b = allset.pop().strip().split(',')
+
+  # find intersection and join to print
+  intersection = sorted (set(a) & set(b))
+  print (',').join(intersection)
 
 data.close()
