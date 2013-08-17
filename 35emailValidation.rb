@@ -2,7 +2,7 @@
 # use http://rubular.com/ to validate
 
 def valid_email
-  File.open("file").each_line do |email|
+  File.open("emails").each_line do |email|
     puts email.downcase.chomp.match(/\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/) ? true: false
     # /^[\w\d\\ "!#$&@'*+\/+=?^_`{|}()~-]+@[\w\d]+(?:\.[\w\d]+)*$/
   end
