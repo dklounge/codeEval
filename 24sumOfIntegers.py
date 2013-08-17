@@ -7,3 +7,5 @@ for line in data:
   a.append(line)
 
 print sum(a)
+
+data.close()

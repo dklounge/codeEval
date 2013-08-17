@@ -11,4 +11,6 @@ def fizzBuzz(file):
     array.append(line.split())
   print array
 
+  data.close()
+
 fizzBuzz("file")

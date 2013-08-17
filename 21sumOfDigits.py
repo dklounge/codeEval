@@ -11,3 +11,5 @@ for line in data:
     counter += 1
 
   print tot
+
+data.close()
